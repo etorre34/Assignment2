@@ -1,11 +1,13 @@
 package cse360assign2;
 /**
- * Calculator class, initial version, created by the instructor.
+ * Calculator class, initial version, created by the instructor. This class will be edited 2 times.
  * <p>
  * This class has methods and a constructor that will be used for another class that will act as a calculator.
- * This class is the initial version the instructor created which all methods and variables must be added to new
- * copies of this class two more times. This version of the Calculator class is just the empty methods provided
- * and documented using the Javadoc style, keeping all methods blank.
+ * This class is the initial version, the instructor created, which all methods and variables must be added.
+ * Following the instructions for the second version and the third version, the testing class must be able
+ * to show the history of the basic operations such as addition, subtraction, multiplication, and division 
+ * after all methods and additional methods are applied to the initial version.
+ * of the Calculator class.
  * <p>
  * 
  * 
@@ -31,7 +33,8 @@ public class Calculator {
 		 * @return
 		 */
 		public int getTotal () {
-			return 0;
+			return total;
+			
 		}
 		
 		/**
@@ -39,6 +42,7 @@ public class Calculator {
 		 * @param value
 		 */
 		public void add (int value) {
+			total = value + total;
 			
 		}
 		
@@ -47,7 +51,7 @@ public class Calculator {
 		 * @param value
 		 */
 		public void subtract (int value) {
-			
+			total = total - value;
 		}
 		
 		/**
@@ -55,7 +59,7 @@ public class Calculator {
 		 * @param value
 		 */
 		public void multiply (int value) {
-			
+			total = total * value;
 		}
 		
 		/**
@@ -63,7 +67,11 @@ public class Calculator {
 		 * @param value
 		 */
 		public void divide (int value) {
-			
+			total = total / value;
+			if (value == 0) {
+				total = 0;
+			}
+			return;	
 		}
 		
 		/**

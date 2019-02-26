@@ -1,4 +1,5 @@
 package cse360assign2;
+
 /**
  * Calculator class, initial version, created by the instructor. This class will be edited 2 times.
  * <p>
@@ -10,22 +11,22 @@ package cse360assign2;
  * of the Calculator class.
  * <p>
  * 
- * 
  * @author Elias Torres
  * Class ID: 565
  * Assignment 2
  *
  */
-
 public class Calculator {
 	
 		/**
-		 * Constructor
+		 * Constructors
 		 */
 		private int total;
+		private String history;
 		
 		public Calculator () {
 			total = 0;  // not needed - included for clarity
+			history = "0"; //added to start initial input
 		}
 		
 		/**
@@ -34,7 +35,6 @@ public class Calculator {
 		 */
 		public int getTotal () {
 			return total;
-			
 		}
 		
 		/**
@@ -43,7 +43,7 @@ public class Calculator {
 		 */
 		public void add (int value) {
 			total = value + total;
-			
+			history = history + " + " + value;	
 		}
 		
 		/**
@@ -52,6 +52,7 @@ public class Calculator {
 		 */
 		public void subtract (int value) {
 			total = total - value;
+			history = history + " - " + value;	
 		}
 		
 		/**
@@ -60,6 +61,7 @@ public class Calculator {
 		 */
 		public void multiply (int value) {
 			total = total * value;
+			history = history + " * " + value;
 		}
 		
 		/**
@@ -71,15 +73,17 @@ public class Calculator {
 			if (value == 0) {
 				total = 0;
 			}
-			return;	
+			//return;	
+			history = history + " / " + value;
+			return;
 		}
 		
 		/**
-		 * A String method to return History
+		 * A String method to return history
 		 * @return
 		 */
 		public String getHistory () {
-			return "";
+			return history;
 		}
 	}
 

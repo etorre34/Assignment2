@@ -69,11 +69,13 @@ public class Calculator {
 		 * @param value
 		 */
 		public void divide (int value) {
-			total = total / value;
 			if (value == 0) {
 				total = 0;
 			}
-			//return;	
+			else
+			{
+				total = total / value;
+			}	
 			history = history + " / " + value;
 			return;
 		}

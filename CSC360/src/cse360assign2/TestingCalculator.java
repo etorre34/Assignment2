@@ -10,6 +10,7 @@ public class TestingCalculator {
 		myCalculator.subtract(2);
 		myCalculator.multiply(2);
 		myCalculator.add(5);
+		myCalculator.divide(0);
 		
 		//System.out.println("0+4-2*2+5" + " = " + myCalculator.getHistory());
 		System.out.println(myCalculator.getHistory());
